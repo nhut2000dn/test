@@ -222,7 +222,7 @@ def classify(sentence):
     return return_list
 
 def response(sentence, show_details=False):
-    return sentence
+    return intents['intents']
 #     results = classify(sentence)
 #     if results:
 #         while results:
