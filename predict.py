@@ -171,7 +171,7 @@ import COVID19Py
 
 
 import pickle
-# data = pickle.load( open( "C:/xampp/htdocs/ChatBot-Covid/Back-end/models/training_data", "rb" ) )
+data = pickle.load( open( "./models/training_data", "rb" ) )
 # words = data['words']
 # classes = data['classes']
 # train_x = data['train_x']
