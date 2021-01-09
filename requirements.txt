@@ -8,3 +8,4 @@ tensorflow==1.4.0
 Flask==1.1.2
 COVID19Py==0.3.0
 gunicorn==20.0.4
+regex==2020.10.28
