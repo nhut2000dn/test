@@ -222,8 +222,8 @@ def classify(sentence):
     return return_list
 
 def response(sentence, show_details=False):
-    results = classify(sentence)
     return sentence
+#     results = classify(sentence)
 #     if results:
 #         while results:
 #             for i in intents['intents']:
