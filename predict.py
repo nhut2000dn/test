@@ -153,9 +153,9 @@ intents = {"intents": [
 # import os
 # os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
-# import nltk
-# from nltk.stem.lancaster import LancasterStemmer
-# stemmer = LancasterStemmer()
+import nltk
+from nltk.stem.lancaster import LancasterStemmer
+stemmer = LancasterStemmer()
 
 # from underthesea import word_tokenize
 
