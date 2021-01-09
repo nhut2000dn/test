@@ -152,7 +152,7 @@ intents = {"intents": [
 
 # import os
 # os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-
+import regex
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
