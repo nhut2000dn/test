@@ -224,7 +224,7 @@ def classify(sentence):
 def response(sentence, show_details=False):
     results = classify(sentence)
     return sentence
-    if results:
+#     if results:
 #         while results:
 #             for i in intents['intents']:
 #                 if i['tag'] == results[0][0]:
