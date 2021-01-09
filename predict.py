@@ -157,16 +157,16 @@ import nltk
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
-# from underthesea import word_tokenize
+from underthesea import word_tokenize
 
-# import numpy as np
-# import tflearn
-# import tensorflow as tf
-# import random
+import numpy as np
+import tflearn
+import tensorflow as tf
+import random
 
-# import requests
+import requests
 
-# import COVID19Py
+import COVID19Py
 
 
 
