@@ -222,7 +222,7 @@ def classify(sentence):
     return return_list
 
 def response(sentence, show_details=False):
-    return regex.findall(r'(?i)\b\p{L}+\b', intents['intents'][0]['tag'])
+    return (words)
 #     results = classify(sentence)
 #     if results:
 #         while results:
