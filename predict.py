@@ -212,18 +212,18 @@ context = {}
 
 ERROR_THRESHOLD = 0.25
 def classify(sentence):
-    results = model.predict([bow(sentence, words)])[0]
+#     results = model.predict([bow(sentence, words)])[0]
 #     results = [[i,r] for i,r in enumerate(results) if r>ERROR_THRESHOLD]
 #     results.sort(key=lambda x: x[1], reverse=True)
 #     return_list = []
 #     for r in results:
 #         return_list.append((classes[r[0]], r[1]))
 #     print(return_list)
-    return results
+    return sentence
 
 def response(sentence, show_details=False):
     results = classify(sentence)
-#     return (sentence + "  " + results)
+    return (results)
 #     if results:
 #         while results:
 #             for i in intents['intents']:
