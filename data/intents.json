@@ -1,136 +1,150 @@
-{"intents": [
+intents = {"intents": [
   {"tag": "chào bạn hê hê",
     "patterns": ["Chào bạn", "xin chào", "Có ai ở đó không", "Chúc một ngày tốt lành"],
     "responses": ["chào, cám ơn vì ghé thăm", "rất vui vì gặp lại bạn", "chào, tôi có thể giúp gì nào"],
     "context_set": ""
   },
   {"tag": "goodbye",
-  "patterns": ["Bye", "See you later", "Goodbye"],
-  "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
-  },
-  {"tag": "greeting",
-    "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
-    "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
-    "context_set": ""
+  "patterns": ["Tạm biệt", "Gặp lại bạn sau", "hẹn gặp lại"],
+  "responses": ["hẹn gặp lai sau, cảm ơn đã ghé thăm", "Chúc một ngày tốt lành", "Tạm biệt! Hãy quay lại sớm."]
   },
   {"tag": "question1",
-  "patterns": ["What is corona virus?"],
-  "responses": ["Corona viruses are a large family of viruses which may cause illness in animals or humans. In humans several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS)and Severe Acute Respiratory Syndrome (SARS.The most recently discovered coronavirus causes coronavirus disease COVID-19."]
+    "patterns": ["Coronavirus là gì?"],
+    "responses": ["Vi rút Corona là một họ vi rút lớn có thể gây bệnh cho động vật hoặc người. Ở người, một số coronavirus được biết là gây ra các bệnh nhiễm trùng đường hô hấp, từ cảm lạnh thông thường đến các bệnh nặng hơn như Hội chứng Hô hấp Trung Đông (MERS) và Hội chứng Hô hấp cấp tính nặng (SARS. Coronavirus được phát hiện gần đây nhất gây ra bệnh coronavirus COVID-19."]
   },
   {"tag": "question2",
-    "patterns": ["How does COVID-19 spread?"],
-    "responses": ["COVID-19 is most likely to spread from person-to-person through: 1.close contact with a person while they are infectious or in the 24 hours before their symptoms appeared 2.close contact with a person with a confirmed infection who coughs or sneezes 3.touching objects or surfaces (such as door handles or tables) contaminated from a cough or sneeze from a person with a confirmed infection and then touching your mouth or face."]
+    "patterns": ["COVID-19 lây lan như thế nào?"],
+    "responses": ["COVID-19 có nhiều khả năng lây lan từ người này sang người khác thông qua: 1. tiếp xúc với một người trong khi họ đang lây nhiễm hoặc trong 24 giờ trước khi các triệu chứng của họ xuất hiện 2. tiếp xúc với một người đã được xác nhận nhiễm trùng ho hoặc hắt hơi 3. chạm vào các đồ vật hoặc bề mặt (chẳng hạn như tay nắm cửa hoặc bàn) bị ô nhiễm khi ho hoặc hắt hơi từ một người đã được xác nhận nhiễm trùng và sau đó chạm vào miệng hoặc mặt của bạn."]
   },
   {"tag": "question3",
-    "patterns": ["Can I leave home?"],
-    "responses": ["All people are required to stay home unless it is absolutely necessary to go outside."]
+    "patterns": ["Tôi có thể rời khỏi nhà không?"],
+    "responses": ["Tất cả mọi người được yêu cầu ở nhà trừ khi thực sự cần thiết phải ra ngoài."]
   },
   {"tag": "question4",
-    "patterns": ["Should I be tested for COVID-19?"],
-    "responses": ["Your doctor will tell you if you should be tested. They will arrange for the test."]
+    "patterns": ["Tôi có nên xét nghiệm COVID-19 không?"],
+    "responses": ["Bác sĩ sẽ cho bạn biết liệu bạn có nên đi xét nghiệm hay không. Họ sẽ sắp xếp cho bài kiểm tra."]
   },
   {"tag": "question5",
-    "patterns": ["Should I wear a face mask?"],
-    "responses": ["You do not need to wear a mask if you are healthy. For more information on the use of surgical masks visit this page on the Health website"]
+    "patterns": ["Tôi có nên đeo khẩu trang không?"],
+    "responses": ["Bạn không cần phải đeo khẩu trang nếu bạn khỏe mạnh. Để biết thêm thông tin về việc sử dụng khẩu trang phẫu thuật, hãy truy cập trang này trên trang web Sức khỏe"]
   },
   {"tag": "question6",
-    "patterns": ["Should I be taking my kids out of childcare or school?"],
-    "responses": ["Schools and childcare are compeletly closed till furthure order."]
+    "patterns": ["Tôi có nên đưa con tôi ra khỏi nhà trẻ hoặc trường học không?"],
+    "responses": ["Trường học và nhà trẻ bị đóng cửa cho đến khi có lệnh."]
   },
   {"tag": "question7",
-    "patterns": ["What about public transport like planes buses trains ride shares and taxis?"],
-    "responses": ["The Government recommends that employers offer flexible working arrangements to minimise the number of people catching public transport at any one time. Long distance services carry a higher risk of infection and should be reconsidered at this time."]
+    "patterns": ["Còn phương tiện giao thông công cộng như máy bay, xe buýt, xe lửa đi chung và taxi?"],
+    "responses": ["Chính phủ khuyến nghị người sử dụng lao động phải bố trí làm việc linh hoạt để giảm thiểu số lượng người sử dụng phương tiện giao thông công cộng cùng một lúc. Các dịch vụ đường dài có nguy cơ lây nhiễm cao hơn và cần được xem xét lại vào lúc này."]
   },
   {"tag": "question8",
-    "patterns": ["What is the government doing to contain the spread of COVID-19?"],
-    "responses": ["The government is following the instructions of the WHO carefully and every level of public health machinery is aligned to it. The ministry of health is constantly updated about the numbers of cases and provides instructions to doctors and hospitals regarding the isolation and treatment of patients with the disease. The government has stopped the entry of people from countries affected by this disease by cancelling visas. Those who are suspected of having the disease are being tested. Quarantine facilities have been put into place in multiple locations. Ideally a mechanism for testing anyone who suspects they have the disease should be put in place but this is yet to happen."]
+    "patterns": ["Chính phủ đang làm gì để ngăn chặn sự lây lan của COVID-19?"],
+    "responses": ["Chính phủ đang tuân thủ các hướng dẫn của WHO một cách cẩn thận và mọi cấp độ của máy móc y tế công cộng đều phù hợp với nó. Bộ Y tế cập nhật liên tục về số ca bệnh và đưa ra hướng dẫn cho các bác sĩ và bệnh viện về việc cách ly và điều trị bệnh nhân mắc bệnh. Chính phủ đã ngăn chặn việc nhập cảnh của những người từ các quốc gia bị ảnh hưởng bởi căn bệnh này bằng cách hủy bỏ thị thực. Những người nghi mắc bệnh đang được xét nghiệm. Các cơ sở kiểm dịch đã được triển khai ở nhiều địa điểm. Một cơ chế lý tưởng để kiểm tra bất kỳ ai nghi ngờ họ mắc bệnh nên được đưa ra nhưng điều này vẫn chưa xảy ra."]
   },
   {"tag": "question9",
-    "patterns": ["Is this infection going to stay or disappear? Will warmer weather help to contain the virus spread? Will it reappear once colder weather returns?"],
-    "responses": ["This is particularly hard to predict. Some viral diseases (e.g. flu) are largely seasonal and tend to spread more easily in winters rather than in the heat of the summer. We have no idea as of now whether COVID-19 will fall into this category. It could vanish altogether after the summer or perhaps more likely scenario — it could appear again in a second wave. We simply don’t know yet."]
+    "patterns": ["Nhiễm trùng này sẽ tồn tại hay biến mất? Thời tiết ấm hơn có giúp ngăn chặn vi rút lây lan không? Nó sẽ xuất hiện trở lại khi thời tiết lạnh hơn trở lại?"],
+    "responses": ["Điều này đặc biệt khó đoán. Một số bệnh do vi rút (ví dụ như bệnh cúm) phần lớn là theo mùa và có xu hướng lây lan dễ dàng hơn vào mùa đông hơn là trong cái nóng của mùa hè. Hiện tại, chúng tôi không biết liệu COVID-19 có thuộc loại này hay không. Nó có thể biến mất hoàn toàn sau mùa hè hoặc có lẽ là kịch bản khả dĩ hơn - nó có thể xuất hiện trở lại trong đợt thứ hai. Chúng tôi chỉ đơn giản là chưa biết."]
   },
   {"tag": "question10",
-    "patterns": ["Is there a vaccine against it or a medicine I can take if I get infected?"],
-    "responses": ["No not yet although many laboratories around the world are working on this. There are a number of vaccine candidates that are being developed and a number of existing medicines for other diseases are being tested on COVID-19 patients to see if they will work. Making a safe vaccine available takes time up to a year or two at best."]
+    "patterns": ["Có vaccine ngừa hoặc loại thuốc tôi có thể dùng nếu bị nhiễm bệnh không?"],
+    "responses": ["Vẫn chưa mặc dù nhiều phòng thí nghiệm trên thế giới đang nghiên cứu về vấn đề này. Có một số ứng cử viên vắc xin đang được phát triển và một số loại thuốc hiện có cho các bệnh khác đang được thử nghiệm trên bệnh nhân COVID-19 để xem liệu chúng có hoạt động hay không. Việc tạo ra một loại vắc xin an toàn có thể mất thời gian tối đa là một hoặc hai năm."]
   },
   {"tag": "question11",
-    "patterns": ["What is COVID-19"],
-    "responses": ["COVID-19 is the infectious disease caused by the most recently discovered corona virus. This new virus and disease were unknown before the outbreak began in Wuhan China in December 2019."]
+    "patterns": ["COVID-19 là gì"],
+    "responses": ["COVID-19 là bệnh truyền nhiễm do virus corona được phát hiện gần đây nhất gây ra. Loại virus và căn bệnh mới này chưa được biết đến trước khi bùng phát ở Vũ Hán, Trung Quốc vào tháng 12 năm 2019."]
   },
   {"tag": "question12",
-    "patterns": ["What are the symptoms of COVID-19"],
-    "responses": ["The most common symptoms of COVID-19 are fever tiredness and dry cough. Some patients may have aches and pains nasal congestion runny nose sore throat or diarrhea. These symptoms are usually mild and begin gradually Some people become infected but don’t develop any symptoms and don't feel unwell. Most people (about 80%) recover from the disease without needing special treatment.Around 1 out of every 6 people who gets COVID-19 becomes seriously ill and develops difficulty breathing"]
+    "patterns": ["Các triệu chứng của COVID-19 là gì", "Các biểu hiện của COVID-19 là gì"],
+    "responses": ["Các triệu chứng phổ biến nhất của COVID-19 là sốt mệt mỏi và ho khan. Một số bệnh nhân có thể bị đau nhức và nghẹt mũi, chảy nước mũi, đau họng hoặc tiêu chảy. Các triệu chứng này thường nhẹ và bắt đầu dần dần Một số người bị nhiễm bệnh nhưng không phát triển bất kỳ triệu chứng nào và không cảm thấy không khỏe. Hầu hết mọi người (khoảng 80%) đều khỏi bệnh mà không cần điều trị đặc biệt. Cứ 6 người nhiễm COVID-19 thì có 1 người bị bệnh nặng và khó thở"]
   },
   {"tag": "question13",
-    "patterns": ["Can the virus that causes COVID-19 be transmitted through the air?"],
-    "responses": ["Studies to date suggest that the virus that causes COVID-19 is mainly transmitted through contact with respiratory droplets rather than through the air. See previous answer on How does COVID-19 spread?"]
+    "patterns": ["Vi rút gây ra COVID-19 có thể lây truyền qua không khí không?"],
+    "responses": ["Các nghiên cứu cho đến nay cho thấy vi rút gây ra COVID-19 chủ yếu lây truyền qua tiếp xúc với các giọt đường hô hấp hơn là qua không khí. Xem câu trả lời trước về COVID-19 lây lan như thế nào?"]
   },
   {"tag": "question14",
-    "patterns": ["Can CoVID-19 be caught from a person who has no symptoms?"],
-    "responses": ["The main way the disease spreads is through respiratory droplets expelled by someone who is coughing. The risk of catching COVID-19 from someone with no symptoms at all is very low.However many people with COVID-19 experience only mild symptoms."]
+    "patterns": ["CoVID-19 có thể bị lây nhiễm từ một người không có triệu chứng không?"],
+    "responses": ["Con đường lây lan chính của bệnh là qua các giọt đường hô hấp do người đang ho tống ra. Nguy cơ nhiễm COVID-19 từ người không có triệu chứng là rất thấp, tuy nhiên nhiều người bị COVID-19 chỉ gặp các triệu chứng nhẹ."]
   },
   {"tag": "question15",
-    "patterns": ["Can I catch COVID-19 from the feces of someone with the disease?"],
-    "responses": ["The risk of catching COVID-19 from the feces of an infected person appears to be low While initial investigations suggest the virus may be present in feces in some cases spread through this route is not a main feature of the outbreak The ongoing research on the waysCOVID-19 is spread and will continue to share new findings"]
+    "patterns": ["Tôi có thể nhiễm COVID-19 từ phân của người mắc bệnh không?"],
+    "responses": ["Nguy cơ nhiễm COVID-19 từ phân của một người bị nhiễm bệnh dường như là thấp Trong khi các điều tra ban đầu cho thấy vi rút có thể có trong phân trong một số trường hợp lây lan qua con đường này không phải là đặc điểm chính của đợt bùng phát. Nghiên cứu đang tiếp tục về các cách thức COVID -19 được lan truyền và sẽ tiếp tục chia sẻ những phát hiện mới"]
   },
   {"tag": "question16",
-    "patterns": ["What can I do to protect myself and prevent the spread of disease"],
-    "responses": ["1.Regularly and thoroughly clean your hands with an alcoholbased hand rub\nMaintain at least 1 metre (3 feet) distance between yourself andanyone who is coughing or sneezing\nAvoid touching eyes nose and mouth\n Make sure you and the people around you follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze\nStay home if you feel unwell\n Keep up to date on the latest COVID-19 hotspots (cities or local areas where COVID-19 is spreading widely)."]
+    "patterns": ["Tôi có thể làm gì để bảo vệ bản thân và ngăn ngừa bệnh lây lan"],
+    "responses": ["1. Thường xuyên và kỹ lưỡng vệ sinh tay của bạn bằng dung dịch xoa tay có cồn \ n Giữ khoảng cách ít nhất 1 mét (3 feet) giữa bạn và người đang ho hoặc hắt hơi \ nTránh chạm vào mắt mũi và miệng \ n Đảm bảo bạn và những người xung quanh bạn tuân theo vệ sinh hô hấp tốt. Điều này có nghĩa là bạn phải che miệng và mũi bằng khuỷu tay cong hoặc khăn giấy khi ho hoặc hắt hơi \ n Hãy về nhà nếu bạn cảm thấy không khỏe \ n Luôn cập nhật các điểm phát sóng COVID-19 mới nhất (các thành phố hoặc khu vực địa phương nơi COVID-19 đang lan rộng )."]
   },
   {"tag": "question17",
-    "patterns": ["How likely am I to catch COVID-19?"],
-    "responses": ["The risk depends on where you are - and more specifically whether there is a COVID-19 outbreak unfolding there."]
+    "patterns": ["Tôi có khả năng mắc phải COVID-19 như thế nào?"],
+    "responses": ["Rủi ro phụ thuộc vào vị trí của bạn - và cụ thể hơn là liệu có bùng phát COVID-19 ở đó hay không."]
   },
   {"tag": "question18",
-    "patterns": ["Should I worry about COVID-19?"],
-    "responses": ["Illness due to COVID-19 infection is generally mild especially for children and young adults"]
+    "patterns": ["Tôi có nên lo lắng về COVID-19 không?"],
+    "responses": ["Bệnh tật do nhiễm COVID-19 thường nhẹ, đặc biệt đối với trẻ em và thanh niên"]
   },
   {"tag": "question19",
-    "patterns": ["Who is at risk of developing severe illness"],
-    "responses": ["While we are still learning about how COVID-2019 affects people older persons and persons with pre-existing medical conditions (such as high blood pressure heart disease lung disease cancer or diabetes) appear to develop serious illness more often than others."]
+    "patterns": ["Ai có nguy cơ mắc bệnh nặng"],
+    "responses": ["Trong khi chúng tôi vẫn đang tìm hiểu về cách COVID-2019 ảnh hưởng đến những người lớn tuổi và những người có bệnh từ trước (chẳng hạn như bệnh cao huyết áp, bệnh tim, ung thư phổi hoặc tiểu đường) dường như phát triển bệnh nghiêm trọng thường xuyên hơn những người khác."]
   },
   {"tag": "question20",
-    "patterns": ["Are antibiotics effective in preventing or treating the COVID-19?"],
-    "responses": ["No. Antibiotics do not work against viruses they only work on bacterial infections"]
+    "patterns": ["Thuốc kháng sinh có hiệu quả trong việc ngăn ngừa hoặc điều trị COVID-19 không?"],
+    "responses": ["Không. Thuốc kháng sinh không hoạt động chống lại vi rút mà chỉ có tác dụng đối với các bệnh nhiễm trùng do vi khuẩn"]
   },
   {"tag": "question21",
-    "patterns": ["Are there any medicines or therapies that can prevent or cure COVID-19"],
-    "responses": ["While some western traditional or home remedies may provide comfort and alleviate symptoms of COVID-19 there is no evidence that current medicine can prevent or cure the disease"]
+    "patterns": ["Có bất kỳ loại thuốc hoặc liệu pháp nào có thể ngăn ngừa hoặc chữa khỏi COVID-19 không"],
+    "responses": ["Mặc dù một số phương pháp điều trị tại nhà hoặc cổ truyền phương Tây có thể mang lại sự thoải mái và giảm bớt các triệu chứng của COVID-19, nhưng không có bằng chứng nào cho thấy y học hiện tại có thể ngăn ngừa hoặc chữa khỏi bệnh"]
   },
   {"tag": "question22",
-    "patterns": ["Is there a vaccine drug or treatment for COVID-19"],
-    "responses": ["Not yet However those affected should receive care to relieve symptoms."]
+    "patterns": ["Có thuốc chủng ngừa hoặc điều trị COVID-19 không"],
+    "responses": ["Chưa Tuy nhiên những người bị ảnh hưởng nên được chăm sóc để giảm các triệu chứng."]
   },
   {"tag": "question23",
-    "patterns": ["Is COVID-19 the same as SARS?"],
-    "responses": ["No. The virus that causes COVID-19 and the one that caused the outbreak of Severe Acute Respiratory Syndrome (SARS) in 2003 are related to each other genetically"]
+    "patterns": ["COVID-19 có giống với SARS không?"],
+    "responses": ["Không. Vi-rút gây ra COVID-19 và vi-rút gây bùng phát Hội chứng hô hấp cấp tính nghiêm trọng (SARS) vào năm 2003 có liên quan đến nhau về mặt di truyền"]
   },
   {"tag": "question24",
-    "patterns": ["How long is the incubation period for COVID-19?"],
-    "responses": ["The 'incubation period' means the time between catching the virus and beginning to have symptoms of the disease Most estimates of the incubation period for COVID-19 range from 1-14 days most commonly around five days. These estimates will be updated as more data become available."]
+    "patterns": ["Thời gian ủ bệnh của COVID-19 là bao lâu?"],
+    "responses": ["'Thời kỳ ủ bệnh' có nghĩa là khoảng thời gian từ khi nhiễm vi rút đến khi bắt đầu có các triệu chứng của bệnh Hầu hết các ước tính về thời gian ủ bệnh của COVID-19 là từ 1-14 ngày, phổ biến nhất là khoảng năm ngày. Các ước tính này sẽ được cập nhật khi có nhiều dữ liệu hơn."]
   },
   {"tag": "question25",
-    "patterns": ["Can humans become infected with the COVID-19 from an animal source?"],
-    "responses": ["To protect yourself such as when visiting live animal markets avoid direct contact with animals and surfaces in contact with animals. Ensure good food safety practices at all times"]
+    "patterns": ["Con người có thể bị nhiễm COVID-19 từ nguồn động vật không?"],
+    "responses": ["Để bảo vệ bản thân như khi đến chợ động vật sống tránh tiếp xúc trực tiếp với động vật và các bề mặt tiếp xúc với động vật. Đảm bảo thực hành tốt an toàn thực phẩm mọi lúc"]
   },
   {"tag": "question26",
-    "patterns": ["Can I catch COVID-19 from my pet?"],
-    "responses": ["While there has been one instance of a dog being infected in Hong Kong to date there is no evidence that a dog cat or any pet can transmit COVID-19 COVID-19 is mainly spread through droplets produced when an infected person coughs sneezes or speaks."]
+    "patterns": ["Tôi có thể bắt COVID-19 từ thú cưng của mình không?"],
+    "responses": ["Mặc dù đã có một trường hợp chó bị nhiễm bệnh ở Hồng Kông cho đến nay, nhưng không có bằng chứng cho thấy chó mèo hoặc bất kỳ vật nuôi nào có thể truyền COVID-19 COVID-19 chủ yếu lây lan qua các giọt được tạo ra khi người bị nhiễm bệnh ho hắt hơi hoặc nói."]
   },
   {"tag": "question27",
-    "patterns": ["How long does the virus survive on surfaces?"],
-    "responses": ["It is not certain how long the virus that causes COVID-19 survives on surfaces but it seems to behave like other corona viruses Studies suggest that corona viruses (including preliminary information on the COVID-19 virus) may persist on surfaces for a few hours or up to several days"]
+    "patterns": ["Virus tồn tại trên bề mặt bao lâu?"],
+    "responses": ["Không rõ vi rút gây ra COVID-19 tồn tại trên bề mặt bao lâu nhưng nó có vẻ hoạt động giống như các vi rút corona khác Các nghiên cứu cho thấy vi rút corona (bao gồm thông tin sơ bộ về vi rút COVID-19) có thể tồn tại trên bề mặt trong vài giờ hoặc lên đến vài ngày"]
   },
   {"tag": "question28",
-    "patterns": ["Is it safe to receive a package from any area where COVID-19 has been reported?"],
-    "responses": ["Yes. The likelihood of an infected person contaminating commercial goods is low and the risk of catching the virus that causes COVID-19 from a package that has been moved travlled and exposed to different conditions and temperature is also low."]
+    "patterns": ["Có an toàn để nhận một gói hàng từ bất kỳ khu vực nào mà COVID-19 đã được báo cáo không?"],
+    "responses": ["Đúng. Khả năng một người bị nhiễm lây nhiễm sang hàng hóa thương mại là thấp và nguy cơ nhiễm vi rút gây ra COVID-19 từ một gói hàng đã được vận chuyển và tiếp xúc với các điều kiện và nhiệt độ khác nhau cũng thấp."]
   },
   {"tag": "question29",
-    "patterns": ["Is there anything I should not do?"],
-    "responses": ["Smoking and Wearing multiple masks and Taking antibiotics."]
+    "patterns": ["Có điều gì tôi không nên làm không?"],
+  },
+  {"tag": "question30",
+    "patterns": ["Tác nhân gây bệnh Covid-19 là gì?", "nguyên nhân gây bệnh covid-19"],
+    "responses": ["Tác nhân gây bệnh Covid-19 là một chủng virus Corona.Chủng virus gây bệnh Covid-19 khác hẳn với các chủng virusCorona đã biết trước đó nên đã được đặt tên là “virusCorona mới” (Novel Coronavirrus - viết tắt là nCoV). Trong danh pháp khoa học, tên chủng virus mới còn có thêm thông tin về năm phát hiện, do vậy tên đầy đủ của chủng virus Corona mới này là “2019 Novel Coronavirus” viết tắt hay ký hiệu là “2019-nCoV”"]
+  },
+  {"tag": "question31",
+    "patterns": ["Virus Covid-19 tồn tại bao lâu trong môi trường tự nhiên?", "Virus Covid-19 duy trì bao lâu trong môi trường tự nhiên?"],
+    "responses": ["Trong môi trường tự nhiên, virus chỉ tồn tại nguyên dạng và không nhân lên, do vậy thời gian sống của virus trong môitrường tự nhiên là thời gian tồn tại của một thế hệ virus. Thời gian này là bao lâu sẽ phụ thuộc vào bản chất của virus và các điều kiện tự nhiên. Thông thường, ở nhiệt độ lạnh virus sẽ tồn tại lâu hơn, nhất là nhiệt độ lạnh âm sâu; các yếu tố khác như độ ẩm, chất liệu bề mặt (đất, gỗ, sắt…) cũng ảnh hưởng đến thời gian tồn tại của virus; đặc biệt ánh sáng mặt trời có tác dụng tiêu diệt virus rất hiệu quả. "]
+  },
+  {"tag": "question32",
+    "patterns": ["Thế nào là tự cách ly?", "tự cách ly là gì"],
+    "responses": ["Tự cách ly là việc tự cá nhân bị nghi ngờ mắc bệnh truyền nhiễm nhưng chưa có triệu chứng bị bệnh hoặc đã xét nghiệm âm tính với mầm bệnh nhưng nghi ngờ chưa thực sự hết khả năng lây nhiễm chủ động cách ly bản thân nhằm hạn chế sự lây truyền bệnh."]
+  },
+  {"tag": "question33",
+    "patterns": ["Tại sao tôi cần đeo khẩu trang?", "Đeo khẩu trang có tác dụng gì"],
+    "responses": ["Khẩu trang là một rào chắn đơn giản giúp ngăn các giọt bắn từ đường hô hấp của quý vị tiếp xúc với người khác. Các nghiên cứu chỉ ra rằng đeo khẩu trang che mũi và miệng giúp làm giảm các giọt bắn ra ngoài. Quý vị nên đeo khẩu trang, ngay cả khi quý vị không cảm thấy bị bệnh."]
   },
   {"tag": "numberCovidCase",
-    "patterns": ["how many covid 19 cases in world?"],
-    "responses": ["covid 19 cases in world"]
+    "patterns": ["có bao nhiêu trường hợp covid 19 ở việt nam ?", "tình hình covid 19 ở viêt nam", "số ca covid"],
+    "responses": ["tình hình covid 19 ở việt nam: "]
+  },
+  {"tag": "phoneNumber",
+    "patterns": ["Đường dây nóng tư vấn COVID-19", "Số điện thoại liên hệ tư vấn"],
+    "responses": ["ĐƯỜNG DÂY NÓNG BỘ Y TẾ: 1900.9095, Email: duongdaynong@moh.gov.vn"]
   }
 ]}
