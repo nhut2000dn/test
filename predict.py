@@ -218,7 +218,7 @@ with open('./data/intents.json') as json_data:
 # context = {}
 
 # ERROR_THRESHOLD = 0.25
-def classify(sentence):
+# def classify(sentence):
 #     results = model.predict([bow(sentence, words)])[0]
 #     results = [[i,r] for i,r in enumerate(results) if r>ERROR_THRESHOLD]
 #     results.sort(key=lambda x: x[1], reverse=True)
