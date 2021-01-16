@@ -152,65 +152,72 @@ intents = {"intents": [
 
 # import os
 # os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-import regex
-import nltk
-from nltk.stem.lancaster import LancasterStemmer
-stemmer = LancasterStemmer()
-
-from underthesea import word_tokenize
-
-import numpy as np
-import tflearn
-import tensorflow as tf
-import random
-
-import requests
-
-import COVID19Py
 
 
 
-import pickle
-data = pickle.load( open( "./models/training_data", "rb" ) )
-words = data['words']
-classes = data['classes']
-train_x = data['train_x']
-train_y = data['train_y']
+import json
+with open('./data/intents.json') as json_data:
+    intents = json.load(json_data)
+
+# import regex
+# import nltk
+# from nltk.stem.lancaster import LancasterStemmer
+# stemmer = LancasterStemmer()
+
+# from underthesea import word_tokenize
+
+# import numpy as np
+# import tflearn
+# import tensorflow as tf
+# import random
+
+# import requests
+
+# import COVID19Py
 
 
-net = tflearn.input_data(shape=[None, len(train_x[0])])
-net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
-net = tflearn.regression(net, optimizer='adam', loss='categorical_crossentropy')
 
-model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
-covid19 = COVID19Py.COVID19()
+# import pickle
+# data = pickle.load( open( "./models/training_data", "rb" ) )
+# words = data['words']
+# classes = data['classes']
+# train_x = data['train_x']
+# train_y = data['train_y']
 
 
-def clean_up_sentence(sentence):
-    sentence_words = nltk.word_tokenize(sentence)
+# net = tflearn.input_data(shape=[None, len(train_x[0])])
+# net = tflearn.fully_connected(net, 8)
+# net = tflearn.fully_connected(net, 8)
+# net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
+# net = tflearn.regression(net, optimizer='adam', loss='categorical_crossentropy')
 
-    sentence_words = [stemmer.stem(word.lower()) for word in sentence_words]
-    return sentence_words
+# model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
+# covid19 = COVID19Py.COVID19()
 
-def bow(sentence, words, show_details=False):
-    sentence_words = clean_up_sentence(sentence)
-    bag = [0]*len(words)  
-    for s in sentence_words:
-        for i,w in enumerate(words):
-            if w == s: 
-                bag[i] = 1
-                if show_details:
-                    print ("found in bag: %s" % w)
 
-    return(np.array(bag))
+# def clean_up_sentence(sentence):
+#     sentence_words = nltk.word_tokenize(sentence)
 
-# load model
-model.load('./models/model.tflearn')
-context = {}
+#     sentence_words = [stemmer.stem(word.lower()) for word in sentence_words]
+#     return sentence_words
 
-ERROR_THRESHOLD = 0.25
+# def bow(sentence, words, show_details=False):
+#     sentence_words = clean_up_sentence(sentence)
+#     bag = [0]*len(words)  
+#     for s in sentence_words:
+#         for i,w in enumerate(words):
+#             if w == s: 
+#                 bag[i] = 1
+#                 if show_details:
+#                     print ("found in bag: %s" % w)
+
+#     return(np.array(bag))
+
+# # load model
+# model.load('./models/model.tflearn')
+# context = {}
+
+# ERROR_THRESHOLD = 0.25
 def classify(sentence):
 #     results = model.predict([bow(sentence, words)])[0]
 #     results = [[i,r] for i,r in enumerate(results) if r>ERROR_THRESHOLD]
@@ -219,11 +226,12 @@ def classify(sentence):
 #     for r in results:
 #         return_list.append((classes[r[0]], r[1]))
 #     print(return_list)
-    return sentence
+#     return sentence
 
 def response(sentence, show_details=False):
-    results = classify(sentence)
-    return (results)
+  return (intents)
+#     results = classify(sentence)
+#     return (results)
 #     if results:
 #         while results:
 #             for i in intents['intents']:
