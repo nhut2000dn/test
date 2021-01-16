@@ -222,7 +222,7 @@ def classify(sentence):
     return return_list
 
 def response(sentence, show_details=False):
-    return ((intents['intents'][0]['patterns'][0]).encode())
+    return ((intents['intents'][0]['patterns'][0]).encode("utf8"))
 #     results = classify(sentence)
 #     if results:
 #         while results:
