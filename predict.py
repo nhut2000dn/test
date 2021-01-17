@@ -154,11 +154,6 @@ intents = {"intents": [
 # os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
-
-import json
-with open('./data/intents.json') as json_data:
-    intents = json.load(json_data)
-
 import regex
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
@@ -229,18 +224,17 @@ def classify(sentence):
     return bow(sentence, words)
 
 def response(sentence, show_details=False):
-#   results = classify(sentence)
-  return (sentence)
-#     if results:
-#         while results:
-#             for i in intents['intents']:
-#                 if i['tag'] == results[0][0]:
-#                   if results[0][0] in "numberCovidCase":
-#                     NumberComfirmed = " Số người mắc bệnh: " + str((covid19.getLocationByCountryCode("VN"))[0]["latest"]["confirmed"])
-#                     NumberDeath = ", Số người chết: " + str((covid19.getLocationByCountryCode("VN"))[0]["latest"]["deaths"])
-#                     print((random.choice(i['responses'])) + NumberComfirmed + NumberDeath)
-#                     return ((random.choice(i['responses'])) + NumberComfirmed + NumberDeath)
-#                   else:
-#                     return 'hi'
+  results = classify(sentence)
+    if results:
+        while results:
+            for i in intents['intents']:
+                if i['tag'] == results[0][0]:
+                  if results[0][0] in "numberCovidCase":
+                    NumberComfirmed = " Số người mắc bệnh: " + str((covid19.getLocationByCountryCode("VN"))[0]["latest"]["confirmed"])
+                    NumberDeath = ", Số người chết: " + str((covid19.getLocationByCountryCode("VN"))[0]["latest"]["deaths"])
+                    print((random.choice(i['responses'])) + NumberComfirmed + NumberDeath)
+                    return ((random.choice(i['responses'])) + NumberComfirmed + NumberDeath)
+                  else:
+                    return 'hi'
                   
-#             results.pop(0)
+            results.pop(0)
