@@ -214,27 +214,26 @@ context = {}
 
 ERROR_THRESHOLD = 0.25
 def classify(sentence):
-#     results = model.predict([bow(sentence, words)])[0]
-#     results = [[i,r] for i,r in enumerate(results) if r>ERROR_THRESHOLD]
-#     results.sort(key=lambda x: x[1], reverse=True)
-#     return_list = []
-#     for r in results:
-#         return_list.append((classes[r[0]], r[1]))
-#     print(return_list)
-    return bow(sentence, words)
+    results = model.predict([bow(sentence, words)])[0]
+    results = [[i,r] for i,r in enumerate(results) if r>ERROR_THRESHOLD]
+    results.sort(key=lambda x: x[1], reverse=True)
+    return_list = []
+    for r in results:
+        return_list.append((classes[r[0]], r[1]))
+    print(return_list)
 
 def response(sentence, show_details=False):
   results = classify(sentence)
-    if results:
-        while results:
-            for i in intents['intents']:
-                if i['tag'] == results[0][0]:
-                  if results[0][0] in "numberCovidCase":
-                    NumberComfirmed = " Số người mắc bệnh: " + str((covid19.getLocationByCountryCode("VN"))[0]["latest"]["confirmed"])
-                    NumberDeath = ", Số người chết: " + str((covid19.getLocationByCountryCode("VN"))[0]["latest"]["deaths"])
-                    print((random.choice(i['responses'])) + NumberComfirmed + NumberDeath)
-                    return ((random.choice(i['responses'])) + NumberComfirmed + NumberDeath)
-                  else:
-                    return 'hi'
-                  
-            results.pop(0)
+  if results:
+      while results:
+          for i in intents['intents']:
+              if i['tag'] == results[0][0]:
+                if results[0][0] in "numberCovidCase":
+                  NumberComfirmed = " Số người mắc bệnh: " + str((covid19.getLocationByCountryCode("VN"))[0]["latest"]["confirmed"])
+                  NumberDeath = ", Số người chết: " + str((covid19.getLocationByCountryCode("VN"))[0]["latest"]["deaths"])
+                  print((random.choice(i['responses'])) + NumberComfirmed + NumberDeath)
+                  return ((random.choice(i['responses'])) + NumberComfirmed + NumberDeath)
+                else:
+                  return 'hi'
+
+          results.pop(0)
