@@ -229,8 +229,8 @@ def classify(sentence):
     return bow(sentence, words)
 
 def response(sentence, show_details=False):
-  results = classify(sentence)
-  return (results)
+#   results = classify(sentence)
+  return (sentence)
 #     if results:
 #         while results:
 #             for i in intents['intents']:
