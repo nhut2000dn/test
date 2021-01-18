@@ -139,16 +139,23 @@ intents = {"intents": [
     "patterns": ["Tại sao tôi cần đeo khẩu trang?", "Đeo khẩu trang có tác dụng gì"],
     "responses": ["Khẩu trang là một rào chắn đơn giản giúp ngăn các giọt bắn từ đường hô hấp của quý vị tiếp xúc với người khác. Các nghiên cứu chỉ ra rằng đeo khẩu trang che mũi và miệng giúp làm giảm các giọt bắn ra ngoài. Quý vị nên đeo khẩu trang, ngay cả khi quý vị không cảm thấy bị bệnh."]
   },
-  {"tag": "numberCovidCase",
-    "patterns": ["có bao nhiêu trường hợp covid 19 ở việt nam ?", "tình hình covid 19 ở viêt nam", "số ca covid"],
+  {"tag": "numberCovidCaseVietNam",
+    "patterns": ["có bao nhiêu trường hợp covid 19 ở việt nam ?", "tình hình covid 19 ở viêt nam", "số ca covid ở việt nam"],
     "responses": ["tình hình covid 19 ở việt nam: "]
+  },
+  {"tag": "numberCovidCaseWorld",
+    "patterns": ["số ca mắc covid 19 trên thế giới ?", "tình hình covid trên thế giới", "tình hình covid 19 của các nước khác"],
+    "responses": ["tình hình covid 19 ở các nước khác: "]
+  },
+  {"tag": "question34",
+    "patterns": ["địa chỉ bệnh viện gần tôi", "địa chị bệnh viện gần", "vị trí bệnh viện"],
+    "responses": ["opened google map"]
   },
   {"tag": "phoneNumber",
     "patterns": ["Đường dây nóng tư vấn COVID-19", "Số điện thoại liên hệ tư vấn"],
     "responses": ["ĐƯỜNG DÂY NÓNG BỘ Y TẾ: 1900.9095, Email: duongdaynong@moh.gov.vn"]
   }
 ]}
-
 
 # import os
 # os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
