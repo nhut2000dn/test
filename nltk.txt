@@ -1,1 +1,2 @@
 LancasterStemmer
+word_tokenize
